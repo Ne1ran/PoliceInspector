@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.addUserContr">
+    <children>
+        <AnchorPane layoutY="102.0" prefHeight="598.0" prefWidth="1200.0" style="-fx-background-color: white;">
+            <children>
+                <TextField fx:id="loginBox" layoutX="171.0" layoutY="102.0" promptText="Логин">
+                    <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="passBox" layoutX="741.0" layoutY="102.0" promptText="Пароль">
+                    <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="surnameBox" layoutX="171.0" layoutY="180.0" promptText="Фамилия">
+                    <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="nameBox" layoutX="741.0" layoutY="180.0" promptText="Имя">
+                    <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="DoB_Box" layoutX="171.0" layoutY="256.0" promptText="Дата рождения">
+                    <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="workplaceBox" layoutX="741.0" layoutY="256.0" promptText="Место работы">
+                    <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                    </font>
+                </TextField>
+                <Button fx:id="addUserButton" layoutX="530.0" layoutY="341.0" mnemonicParsing="false" text="Добавить">
+                    <font>
+                        <Font name="Comic Sans MS" size="24.0" />
+                    </font>
+                </Button>
+                <Label fx:id="labelCore" layoutX="279.0" layoutY="23.0" text="Введите данные для регистрации нового пользователя:">
+                    <font>
+                        <Font name="Comic Sans MS" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="511.0" layoutY="483.0" textFill="RED">
+                    <font>
+                        <Font name="Comic Sans MS" size="24.0" />
+                    </font>
+                </Label>
+            <CheckBox fx:id="giveAdmPems" layoutX="539.0" layoutY="192.0" mnemonicParsing="false" text="Администратор">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font>
+            </CheckBox>
+            </children></AnchorPane>
+        <Label layoutX="458.0" layoutY="27.0" text="Инспектор ГАИ">
+            <font>
+                <Font name="Comic Sans MS" size="38.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.addDriversContr">
+    <children>
+        <AnchorPane layoutY="102.0" prefHeight="598.0" prefWidth="1200.0" style="-fx-background-color: white;">
+            <children>
+                <TextField fx:id="driverName" layoutX="171.0" layoutY="102.0" promptText="Имя водителя">
+                    <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="driverSurname" layoutX="741.0" layoutY="102.0" promptText="Фамилия водителя">
+                    <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="driverDoB" layoutX="171.0" layoutY="180.0" promptText="Дата рождения">
+                    <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="driverLicenceID" layoutX="741.0" layoutY="180.0" promptText="Номер лицензии">
+                    <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="driverCarBrand" layoutX="171.0" layoutY="256.0" promptText="Марка машины">
+                    <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="driverCarNumber" layoutX="741.0" layoutY="256.0" promptText="Номер машины">
+                    <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="driverPhoneNum" layoutX="171.0" layoutY="336.0" promptText="Номер телефона">
+                    <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="driversViolations" layoutX="741.0" layoutY="336.0" promptText="Количество нарушений">
+                    <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                    </font>
+                </TextField>
+                <Button fx:id="addButton" layoutX="530.0" layoutY="419.0" mnemonicParsing="false" text="Добавить">
+                    <font>
+                        <Font name="Comic Sans MS" size="24.0" />
+                    </font>
+                </Button>
+                <Label fx:id="labelCore" layoutX="438.0" layoutY="22.0" text="Введите данные о водителе:">
+                    <font>
+                        <Font name="Comic Sans MS" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="511.0" layoutY="483.0" textFill="RED">
+                    <font>
+                        <Font name="Comic Sans MS" size="24.0" />
+                    </font>
+                </Label>
+            </children></AnchorPane>
+        <Label layoutX="458.0" layoutY="27.0" text="Инспектор ГАИ">
+            <font>
+                <Font name="Comic Sans MS" size="38.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
