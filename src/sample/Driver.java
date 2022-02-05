@@ -10,6 +10,17 @@ public class Driver {
     private String phonenumber;
     private String numofviolations;
 
+    public Driver(String name, String surname, String dateofbirth, String licenceid, String car, String carnumber, String phonenumber, String numofviolations) {
+        this.name = name;
+        this.surname = surname;
+        this.dateofbirth = dateofbirth;
+        this.licenceid = licenceid;
+        this.car = car;
+        this.carnumber = carnumber;
+        this.phonenumber = phonenumber;
+        this.numofviolations = numofviolations;
+    }
+
     public Driver() {
     }
 

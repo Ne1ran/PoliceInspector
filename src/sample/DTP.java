@@ -1,7 +1,7 @@
 package sample;
 
 public class DTP {
-    private String where;
+    private String place;
     private String approxtime;
     private String casualties;
     private String driversinvolved;
@@ -10,8 +10,8 @@ public class DTP {
     private String inspector;
     private String reason;
 
-    public DTP(String where, String approxtime, String casualties, String driversinvolved, String typeofcar, String numberofcar, String inspector, String reason) {
-        this.where = where;
+    public DTP(String place, String approxtime, String casualties, String driversinvolved, String typeofcar, String numberofcar, String inspector, String reason) {
+        this.place = place;
         this.approxtime = approxtime;
         this.casualties = casualties;
         this.driversinvolved = driversinvolved;
@@ -25,12 +25,12 @@ public class DTP {
 
     }
 
-    public String getWhere() {
-        return where;
+    public String getplace() {
+        return place;
     }
 
-    public void setWhere(String where) {
-        this.where = where;
+    public void setplace(String place) {
+        this.place = place;
     }
 
     public String getApproxtime() {

@@ -55,21 +55,19 @@ public class addDTPContr {
         });
 
         addDTPButton.setOnAction(Event ->{
-            if (!approxTimeTB.getText().trim().equals("") && !carNumberTB.getText().trim().equals("") && typesofcarsTB.getText().trim().equals("") &&
-            casualtiesTB.getText().trim().equals("") && driversInvTB.getText().trim().equals("") && inspectorTB.getText().trim().equals("") &&
-            reasonTB.getText().trim().equals("") && whereTB.getText().trim().equals("")){
+            if (!(approxTimeTB.getText().trim().equals("") || carNumberTB.getText().trim().equals("") || typesofcarsTB.getText().trim().equals("") ||
+            casualtiesTB.getText().trim().equals("") || driversInvTB.getText().trim().equals("") || inspectorTB.getText().trim().equals("") ||
+            reasonTB.getText().trim().equals("") || whereTB.getText().trim().equals(""))){
                 ConnHandler handler = new ConnHandler();
-                System.out.println("bbob");
                 DTP newDTP = new DTP(whereTB.getText(), approxTimeTB.getText(), casualtiesTB.getText(), driversInvTB.getText(),
                         typesofcarsTB.getText(), carNumberTB.getText(), inspectorTB.getText(), reasonTB.getText());
                 try {
                     handler.addDTP(newDTP);
                 } catch (SQLException | ClassNotFoundException throwables) {
-                    throwables.printStackTrace();
+                    labelCore.setText("Не удалось добавить данные");
                 }
-                System.out.println("bibib");
-                setScene("/sample/mainWindow.fxml");
-            }
+                labelCore.setText("Данные успешно добавлены!");
+            } else labelCore.setText("Пожалуйста, заполните все поля");
         });
     }
     public void setScene(String window){

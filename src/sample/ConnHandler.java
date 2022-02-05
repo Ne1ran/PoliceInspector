@@ -1,6 +1,5 @@
 package sample;
 
-import java.lang.annotation.Target;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -36,13 +35,12 @@ public class ConnHandler extends Config {
 
     public void addDTP(DTP dtp) throws SQLException, ClassNotFoundException{
         String table = AllConstants.DTPConst.DTPs_TABLE;
-        String insert = "INSERT INTO " + table + "(" + AllConstants.DTPConst.WHERE + ',' + AllConstants.DTPConst.TIME + ',' +
+        String insert = "INSERT INTO " + table + "(" + AllConstants.DTPConst.PLACE + ',' + AllConstants.DTPConst.TIME + ',' +
                 AllConstants.DTPConst.CASUALTIES + ',' + AllConstants.DTPConst.DRIVERSINVOLVED + ',' + AllConstants.DTPConst.TYPEOFCAR + ',' +
                 AllConstants.DTPConst.NUMBEROFCAR + ',' + AllConstants.DTPConst.INSPECTOR + ',' + AllConstants.DTPConst.REASON + ')' +
                 "VALUES(?,?,?,?,?,?,?,?)";
-        System.out.println("bbabb");
         PreparedStatement prst = getConnection().prepareStatement(insert);
-        prst.setString(1, dtp.getWhere());
+        prst.setString(1, dtp.getplace());
         prst.setString(2, dtp.getApproxtime());
         prst.setString(3, dtp.getCasualties());
         prst.setString(4, dtp.getDriversinvolved());
@@ -50,6 +48,39 @@ public class ConnHandler extends Config {
         prst.setString(6, dtp.getNumberofcar());
         prst.setString(7, dtp.getInspector());
         prst.setString(8, dtp.getReason());
+        prst.executeUpdate();
+    }
+
+    public void addDriver(Driver driver) throws SQLException,ClassNotFoundException{
+        String table = AllConstants.DriversConst.DRIVERSTABLE;
+        String insert = "INSERT INTO " + table + "(" + AllConstants.DriversConst.NAME + ',' + AllConstants.DriversConst.SURNAME + ',' +
+                AllConstants.DriversConst.DoB + ',' + AllConstants.DriversConst.LICENCEID + ',' + AllConstants.DriversConst.CARTYPE + ',' +
+                AllConstants.DriversConst.CARNUMBER + ',' + AllConstants.DriversConst.PHONENUM + ',' + AllConstants.DriversConst.VIOLATIONS +
+                ")VALUES(?,?,?,?,?,?,?,?)";
+        PreparedStatement prst = getConnection().prepareStatement(insert);
+        prst.setString(1, driver.getName());
+        prst.setString(2, driver.getSurname());
+        prst.setString(3, driver.getDateofbirth());
+        prst.setString(4, driver.getLicenceid());
+        prst.setString(5, driver.getCar());
+        prst.setString(6, driver.getCarnumber());
+        prst.setString(7, driver.getPhonenumber());
+        prst.setString(8, driver.getNumofviolations());
+        prst.executeUpdate();
+    }
+
+    public void addTransport(Transport transport) throws SQLException,ClassNotFoundException {
+        String table = AllConstants.TransportConst.TRANSPORT_TABLE;
+        String insert = "INSERT INTO " + table + "(" + AllConstants.TransportConst.NUMBER + ',' + AllConstants.TransportConst.BRAND + ',' +
+                AllConstants.TransportConst.DRIVERSURNAME + ',' + AllConstants.TransportConst.DRIVERNAME + ',' + AllConstants.TransportConst.COLOR + ',' +
+                AllConstants.TransportConst.MODEL + ")VALUES(?,?,?,?,?,?)";
+        PreparedStatement prst = getConnection().prepareStatement(insert);
+        prst.setString(1, transport.getNumber());
+        prst.setString(2, transport.getBrand());
+        prst.setString(3, transport.getDriversurname());
+        prst.setString(4, transport.getDrivername());
+        prst.setString(5, transport.getColor());
+        prst.setString(6, transport.getModel());
         prst.executeUpdate();
     }
 

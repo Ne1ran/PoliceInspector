@@ -44,7 +44,7 @@ public class AllConstants {
         public static final String DTPs_TABLE = "incidents";
 
         public static final String ID = "incidentid";
-        public static final String WHERE = "where";
+        public static final String PLACE = "place";
         public static final String TIME = "approxtime";
         public static final String CASUALTIES = "casualties";
         public static final String DRIVERSINVOLVED = "driversinvolved";

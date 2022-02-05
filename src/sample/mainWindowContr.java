@@ -1,6 +1,5 @@
 package sample;
 
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -55,11 +54,8 @@ public class mainWindowContr {
             d1.setText(changeLabels(driversSet, "Drivers"));
             dtp1.setText(changeLabels(DTPSet, "DTP"));
             t1.setText(changeLabels(transportSet, "Transport"));
-        } catch (SQLException throwables) {
+        } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();
-            System.out.println("Шиза");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         }
         btnAddDTP.setOnAction(Event -> {
             btnAddDTP.getScene().getWindow().hide();
@@ -73,7 +69,7 @@ public class mainWindowContr {
         });
         btnAddDrivers.setOnAction(Event -> {
             btnAddUser.getScene().getWindow().hide();
-            setScene("/sample/addDrivers.fxml");
+            setScene("/sample/addDriver.fxml");
         });
         btnAddTransport.setOnAction(Event -> {
             btnAddUser.getScene().getWindow().hide();
@@ -111,7 +107,7 @@ public class mainWindowContr {
                 textForLabel += count + ". " + resultSet.getNString(AllConstants.TransportConst.NUMBER) + "; " +
                         resultSet.getNString(AllConstants.TransportConst.BRAND) + "; " + resultSet.getNString(AllConstants.TransportConst.DRIVERSURNAME) + "\n";
             } else if (labelType.equals("DTP")){
-                textForLabel += count + ". " + resultSet.getNString(AllConstants.DTPConst.WHERE) + "; " +
+                textForLabel += count + ". " + resultSet.getNString(AllConstants.DTPConst.PLACE) + "; " +
                         resultSet.getNString(AllConstants.DTPConst.TIME) + "; " + resultSet.getNString(AllConstants.DTPConst.INSPECTOR) + "\n";
             }
     }

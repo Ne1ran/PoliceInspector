@@ -46,7 +46,7 @@
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
                 </Button>
-                <Label fx:id="labelCore" layoutX="279.0" layoutY="23.0" text="Введите данные для регистрации нового пользователя:">
+                <Label fx:id="labelCore" alignment="CENTER" layoutY="23.0" prefHeight="35.0" prefWidth="1200.0" text="Введите данные для регистрации нового пользователя:" textAlignment="CENTER">
                     <font>
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
@@ -67,5 +67,10 @@
                 <Font name="Comic Sans MS" size="38.0" />
             </font>
         </Label>
+      <Button fx:id="goBackBtn" layoutX="26.0" layoutY="28.0" mnemonicParsing="false" text="Назад">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>
