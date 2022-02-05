@@ -1,37 +1,35 @@
 package sample;
 
-public class CurrentlyLoggedUser { //пока не юзаем
-    String perms;
-    String surname;
-    String name;
+public class CurrentlyLoggedUser {
+    public static String perms;
+    public static String surname;
+    public static String name;
 
-    public CurrentlyLoggedUser(String perms, String surname, String name) {
-        this.perms = perms;
-        this.surname = surname;
-        this.name = name;
+    public CurrentlyLoggedUser() {
+
     }
 
-    public String getPerms() {
+    public static String getPerms() {
         return perms;
     }
 
-    public void setPerms(String perms) {
-        this.perms = perms;
+    public static void setPerms(String perms) {
+        CurrentlyLoggedUser.perms = perms;
     }
 
-    public String getSurname() {
+    public static String getSurname() {
         return surname;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public static void setSurname(String surname) {
+        CurrentlyLoggedUser.surname = surname;
     }
 
-    public String getName() {
+    public static String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public static void setName(String name) {
+        CurrentlyLoggedUser.name = name;
     }
 }

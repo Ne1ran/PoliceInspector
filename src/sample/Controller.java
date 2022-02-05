@@ -26,12 +26,13 @@ public class Controller {
     @FXML
     void initialize() {
         authButton.setOnAction(Event -> {
-            String login = loginField.getText();
-            String pass = passwordField.getText();
+            String login = loginField.getText().trim();
+            String pass = passwordField.getText().trim();
 
             if (!login.equals("") && !pass.equals("")){
                 try {
-                    if (loginUser(login, pass)){
+                    CurrentlyLoggedUser userNow = new CurrentlyLoggedUser();
+                    if (loginUser(login, pass, userNow)){
                         authButton.getScene().getWindow().hide();
 
                         FXMLLoader loader = new FXMLLoader();
@@ -58,7 +59,7 @@ public class Controller {
         });
     }
 
-    private boolean loginUser(String login, String pass) throws SQLException, ClassNotFoundException {
+    private boolean loginUser(String login, String pass, CurrentlyLoggedUser user) throws SQLException, ClassNotFoundException {
         ConnHandler handler = new ConnHandler();
         User signInUser = new User();
         signInUser.setlogin(login);
@@ -69,7 +70,10 @@ public class Controller {
 
         while (rset.next()){
             count++;
+            CurrentlyLoggedUser.setName(rset.getNString(AllConstants.UsersConst.USER_NAME));
+            CurrentlyLoggedUser.setPerms(rset.getNString(AllConstants.UsersConst.USER_TYPE));
+            CurrentlyLoggedUser.setSurname(rset.getNString(AllConstants.UsersConst.USER_SURNAME));
         }
-        return count > 0;
+        return count == 1;
     }
 }
