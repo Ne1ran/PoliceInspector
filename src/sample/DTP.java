@@ -25,13 +25,9 @@ public class DTP {
 
     }
 
-    public String getplace() {
-        return place;
-    }
+    public String getPlace() { return place; }
 
-    public void setplace(String place) {
-        this.place = place;
-    }
+    public void setplace(String place) { this.place = place; }
 
     public String getApproxtime() {
         return approxtime;

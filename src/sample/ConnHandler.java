@@ -40,7 +40,7 @@ public class ConnHandler extends Config {
                 AllConstants.DTPConst.NUMBEROFCAR + ',' + AllConstants.DTPConst.INSPECTOR + ',' + AllConstants.DTPConst.REASON + ')' +
                 "VALUES(?,?,?,?,?,?,?,?)";
         PreparedStatement prst = getConnection().prepareStatement(insert);
-        prst.setString(1, dtp.getplace());
+        prst.setString(1, dtp.getPlace());
         prst.setString(2, dtp.getApproxtime());
         prst.setString(3, dtp.getCasualties());
         prst.setString(4, dtp.getDriversinvolved());

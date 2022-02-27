@@ -52,8 +52,5 @@ public class AllConstants {
         public static final String NUMBEROFCAR = "numberofcar";
         public static final String INSPECTOR = "inspector";
         public static final String REASON = "reason";
-
     }
-
-
 }

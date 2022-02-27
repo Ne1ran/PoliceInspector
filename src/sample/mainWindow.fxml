@@ -9,17 +9,17 @@
     <children>
         <AnchorPane layoutY="102.0" prefHeight="598.0" prefWidth="1200.0" style="-fx-background-color: white;">
          <children>
-            <Button fx:id="btnAddDTP" layoutX="491.0" layoutY="501.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="220.0" style="-fx-border-color: black;" text="Добавить" textAlignment="CENTER">
+            <Button fx:id="btnAddDTP" layoutX="489.0" layoutY="389.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="220.0" style="-fx-border-color: black;" text="Добавить" textAlignment="CENTER">
                <font>
                   <Font name="Berlin Sans FB" size="24.0" />
                </font>
             </Button>
-            <Button fx:id="btnAddDrivers" layoutX="138.0" layoutY="501.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="220.0" style="-fx-border-color: black;" text="Добавить" textAlignment="CENTER">
+            <Button fx:id="btnAddDrivers" layoutX="139.0" layoutY="389.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="220.0" style="-fx-border-color: black;" text="Добавить" textAlignment="CENTER">
                <font>
                   <Font name="Berlin Sans FB" size="24.0" />
                </font>
             </Button>
-            <Button fx:id="btnAddTransport" layoutX="841.0" layoutY="501.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="220.0" style="-fx-border-color: black;" text="Добавить" textAlignment="CENTER">
+            <Button fx:id="btnAddTransport" layoutX="842.0" layoutY="389.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="220.0" style="-fx-border-color: black;" text="Добавить" textAlignment="CENTER">
                <font>
                   <Font name="Berlin Sans FB" size="24.0" />
                </font>
@@ -44,45 +44,48 @@
                   <Font name="Comic Sans MS" size="24.0" />
                </font>
             </Label>
-            <AnchorPane layoutX="84.0" layoutY="117.0" prefHeight="374.0" prefWidth="330.0" style="-fx-background-color: lightblue;">
-               <children>
-                  <Label fx:id="d1" alignment="TOP_LEFT" layoutX="9.0" layoutY="25.0" prefHeight="348.0" prefWidth="321.0">
-                     <font>
-                        <Font name="Berlin Sans FB" size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="436.0" layoutY="117.0" prefHeight="374.0" prefWidth="330.0" style="-fx-background-color: lightblue;">
-               <children>
-                  <Label fx:id="dtp1" alignment="TOP_LEFT" layoutX="9.0" layoutY="25.0" prefHeight="348.0" prefWidth="321.0">
-                     <font>
-                        <Font name="Berlin Sans FB" size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="786.0" layoutY="117.0" prefHeight="374.0" prefWidth="330.0" style="-fx-background-color: lightblue;">
-               <children>
-                  <Label fx:id="t1" alignment="TOP_LEFT" layoutX="9.0" layoutY="25.0" prefHeight="348.0" prefWidth="321.0">
-                     <font>
-                        <Font name="Berlin Sans FB" size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
+            <Button fx:id="btnWatchDrivers" layoutX="139.0" layoutY="177.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="220.0" style="-fx-border-color: black;" text="Просмотр" textAlignment="CENTER">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSearchDrivers" layoutX="139.0" layoutY="283.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="220.0" style="-fx-border-color: black;" text="Поиск" textAlignment="CENTER">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSearchDTPs" layoutX="489.0" layoutY="283.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="220.0" style="-fx-border-color: black;" text="Поиск" textAlignment="CENTER">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSearchTransport" layoutX="842.0" layoutY="283.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="220.0" style="-fx-border-color: black;" text="Поиск" textAlignment="CENTER">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnWatchDTPs" layoutX="489.0" layoutY="177.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="220.0" style="-fx-border-color: black;" text="Просмотр" textAlignment="CENTER">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnWatchTransports" layoutX="842.0" layoutY="177.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="220.0" style="-fx-border-color: black;" text="Просмотр" textAlignment="CENTER">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Button>
          </children></AnchorPane>
         <Label layoutX="458.0" layoutY="27.0" text="Инспектор ГАИ">
             <font>
                 <Font name="Comic Sans MS" size="38.0" />
             </font>
         </Label>
-      <Button fx:id="btnAddUser" layoutX="966.0" layoutY="13.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="220.0" style="-fx-background-color: lightblue; -fx-border-color: black;" text="Добавить нового пользователя" textAlignment="CENTER">
+      <Button fx:id="btnAddUser" layoutX="946.0" layoutY="13.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="240.0" style="-fx-background-color: lightblue; -fx-border-color: black;" text="Добавить нового пользователя" textAlignment="CENTER">
          <font>
             <Font name="Berlin Sans FB" size="14.0" />
          </font>
       </Button>
-      <Label fx:id="labelNoPerms" layoutX="969.0" layoutY="54.0" prefHeight="28.0" prefWidth="214.0" text="" textAlignment="CENTER" textFill="RED">
+      <Label fx:id="labelNoPerms" alignment="CENTER" layoutX="943.0" layoutY="54.0" prefHeight="28.0" prefWidth="240.0" text="" textAlignment="CENTER" textFill="RED">
          <font>
             <Font name="Comic Sans MS" size="14.0" />
          </font>

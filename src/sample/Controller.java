@@ -1,14 +1,9 @@
 package sample;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -34,20 +29,8 @@ public class Controller {
                     CurrentlyLoggedUser userNow = new CurrentlyLoggedUser();
                     if (loginUser(login, pass, userNow)){
                         authButton.getScene().getWindow().hide();
-
-                        FXMLLoader loader = new FXMLLoader();
-                        loader.setLocation(getClass().getResource("/sample/mainWindow.fxml"));
-                        try {
-                            loader.load();
-                        } catch (IOException exception) {
-                            System.out.println("Ошибка loader");
-                        }
-
-                        Parent mainWindowRoot = loader.getRoot();
-                        Stage stage = new Stage();
-                        stage.setScene(new Scene(mainWindowRoot));
-                        stage.showAndWait();
-                    } else System.out.println("Такого юзера нема");
+                        mainWindowContr.setScene("/sample/mainWindow.fxml");
+                    } else System.out.println("Такого пользователя не существует");
                 } catch (SQLException | ClassNotFoundException throwables) {
                     throwables.printStackTrace();
                 }

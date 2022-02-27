@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.addDriversContr">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.addDriverContr">
     <children>
         <AnchorPane layoutY="102.0" prefHeight="598.0" prefWidth="1200.0" style="-fx-background-color: white;">
             <children>
@@ -55,7 +55,7 @@
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
                 </Button>
-                <Label fx:id="labelCore" layoutX="438.0" layoutY="22.0" text="Введите данные о водителе:">
+                <Label fx:id="labelCore" alignment="CENTER" layoutY="22.0" prefHeight="35.0" prefWidth="1200.0" text="Введите данные о водителе:">
                     <font>
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
@@ -71,5 +71,10 @@
                 <Font name="Comic Sans MS" size="38.0" />
             </font>
         </Label>
+      <Button fx:id="goBackBtn" layoutX="36.0" layoutY="28.0" mnemonicParsing="false" text="Назад">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

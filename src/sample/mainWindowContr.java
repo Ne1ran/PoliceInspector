@@ -27,27 +27,39 @@ public class mainWindowContr {
     private Button btnAddUser;
 
     @FXML
+    private Button btnSearchDTPs;
+
+    @FXML
+    private Button btnSearchDrivers;
+
+    @FXML
+    private Button btnSearchTransport;
+
+    @FXML
+    private Button btnWatchDTPs;
+
+    @FXML
+    private Button btnWatchDrivers;
+
+    @FXML
+    private Button btnWatchTransports;
+
+    @FXML
     private Label labelNoPerms;
 
     @FXML
     private Label mainLabel;
 
     @FXML
-    private Label d1;
-
-    @FXML
-    private Label dtp1;
-
-    @FXML
-    private Label t1;
-
-    @FXML
     void initialize(){
         ConnHandler handler = new ConnHandler();
 
-        mainLabel.setText("С возвращением, инспектор " + CurrentlyLoggedUser.getSurname() + " " + CurrentlyLoggedUser.getName());
-
-        try {
+        if (CurrentlyLoggedUser.getPerms().equals("Admin")){
+            mainLabel.setText("С возвращением, администратор " + CurrentlyLoggedUser.getSurname() + " " + CurrentlyLoggedUser.getName());
+        } else {
+            mainLabel.setText("С возвращением, инспектор " + CurrentlyLoggedUser.getSurname() + " " + CurrentlyLoggedUser.getName());
+        }
+        /*try {
             ResultSet driversSet = handler.getDrivers();
             ResultSet DTPSet = handler.getDTPs();
             ResultSet transportSet = handler.getTransport();
@@ -56,34 +68,59 @@ public class mainWindowContr {
             t1.setText(changeLabels(transportSet, "Transport"));
         } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();
-        }
+        } */
         btnAddDTP.setOnAction(Event -> {
             btnAddDTP.getScene().getWindow().hide();
             setScene("/sample/addDTP.fxml");
         });
         btnAddUser.setOnAction(Event -> {
             if (CurrentlyLoggedUser.getPerms().equals("Admin")){
-            btnAddUser.getScene().getWindow().hide();
-            setScene("/sample/addUser.fxml");
+                btnAddUser.getScene().getWindow().hide();
+                setScene("/sample/addUser.fxml");
             } else labelNoPerms.setText("У вас недостаточно прав");
         });
         btnAddDrivers.setOnAction(Event -> {
-            btnAddUser.getScene().getWindow().hide();
+            btnAddDrivers.getScene().getWindow().hide();
             setScene("/sample/addDriver.fxml");
         });
         btnAddTransport.setOnAction(Event -> {
-            btnAddUser.getScene().getWindow().hide();
+            btnAddTransport.getScene().getWindow().hide();
+            setScene("/sample/addTransport.fxml");
+        });
+        btnWatchDrivers.setOnAction(Event -> {
+            btnWatchDrivers.getScene().getWindow().hide();
+            setScene("/sample/watchDrivers.fxml");
+        });
+        btnWatchTransports.setOnAction(Event -> {
+            btnWatchTransports.getScene().getWindow().hide();
+            setScene("/sample/watchTransports.fxml");
+        });
+        btnWatchDTPs.setOnAction(Event -> {
+            btnWatchDTPs.getScene().getWindow().hide();
+            setScene("/sample/watchDTPs.fxml");
+        });
+        btnSearchDrivers.setOnAction(Event -> {
+            btnSearchDrivers.getScene().getWindow().hide();
+            setScene("/sample/addTransport.fxml");
+        });
+        btnSearchDTPs.setOnAction(Event -> {
+            btnSearchDTPs.getScene().getWindow().hide();
+            setScene("/sample/addTransport.fxml");
+        });
+        btnSearchTransport.setOnAction(Event -> {
+            btnSearchTransport.getScene().getWindow().hide();
             setScene("/sample/addTransport.fxml");
         });
     }
-    public void setScene(String window){
+    public static void setScene(String window){
+
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource(window));
+        loader.setLocation(mainWindowContr.class.getResource(window));
 
         try {
             loader.load();
         } catch (IOException exception) {
-            System.out.println("Ошибка loader");
+            System.out.println("Ошибка loader!!!");
         }
 
         Parent Root = loader.getRoot();
@@ -92,7 +129,7 @@ public class mainWindowContr {
         stage.show();
     }
 
-    public String changeLabels(ResultSet resultSet, String labelType) throws SQLException {
+    /*public String changeLabels(ResultSet resultSet, String labelType) throws SQLException {
         String textForLabel = "";
         int count = 0;
         while (resultSet.next()){
@@ -112,7 +149,7 @@ public class mainWindowContr {
             }
     }
         return textForLabel;
-    }
+    } */
 }
 
 

@@ -46,7 +46,7 @@ public class addTransportContr {
 
         goBackBtn.setOnAction(ActionEvent ->{
             goBackBtn.getScene().getWindow().hide();
-            setScene("/sample/mainWindow.fxml");
+            mainWindowContr.setScene("/sample/mainWindow.fxml");
         });
 
         addButton.setOnAction(ActionEvent ->{
@@ -72,20 +72,5 @@ public class addTransportContr {
                 labelCore.setText("Данные успешно добавлены!");
             } else labelCore.setText("Пожалуйста, заполните все поля");
         });
-    }
-    public void setScene(String window){
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource(window));
-
-        try {
-            loader.load();
-        } catch (IOException exception) {
-            System.out.println("Ошибка loader");
-        }
-
-        Parent Root = loader.getRoot();
-        Stage stage = new Stage();
-        stage.setScene(new Scene(Root));
-        stage.show();
     }
 }
