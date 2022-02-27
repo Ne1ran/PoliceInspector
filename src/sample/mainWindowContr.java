@@ -101,15 +101,15 @@ public class mainWindowContr {
         });
         btnSearchDrivers.setOnAction(Event -> {
             btnSearchDrivers.getScene().getWindow().hide();
-            setScene("/sample/addTransport.fxml");
+            setScene("/sample/searchDrivers.fxml");
         });
         btnSearchDTPs.setOnAction(Event -> {
             btnSearchDTPs.getScene().getWindow().hide();
-            setScene("/sample/addTransport.fxml");
+            setScene("/sample/searchDTPs.fxml");
         });
         btnSearchTransport.setOnAction(Event -> {
             btnSearchTransport.getScene().getWindow().hide();
-            setScene("/sample/addTransport.fxml");
+            setScene("/sample/searchTransport.fxml");
         });
     }
     public static void setScene(String window){

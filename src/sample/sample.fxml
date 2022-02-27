@@ -11,7 +11,7 @@
    <children>
       <AnchorPane layoutY="102.0" prefHeight="598.0" prefWidth="1200.0" style="-fx-background-color: white;">
          <children>
-            <Label layoutX="296.0" layoutY="57.0"  text="Добро пожаловать в приложение &quot;Инспектор ГАИ&quot;!">
+            <Label layoutX="296.0" layoutY="57.0" text="Добро пожаловать в приложение &quot;Инспектор ГАИ&quot;!">
                <font>
                   <Font name="Comic Sans MS" size="24.0" />
                </font>
@@ -35,13 +35,18 @@
                   </Button>
                </children>
             </AnchorPane>
-            <Label layoutX="220.0" layoutY="103.0"  text="Пожалуйста, авторизируйтесь, чтобы получить доступ к системе:">
+            <Label layoutX="220.0" layoutY="103.0" text="Пожалуйста, авторизируйтесь, чтобы получить доступ к системе:">
+               <font>
+                  <Font name="Comic Sans MS" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="wrongData" alignment="CENTER" layoutX="-2.0" layoutY="392.0" prefHeight="35.0" prefWidth="1200.0" textFill="RED">
                <font>
                   <Font name="Comic Sans MS" size="24.0" />
                </font>
             </Label>
          </children></AnchorPane>
-      <Label layoutX="458.0" layoutY="27.0"  text="Инспектор ГАИ">
+      <Label layoutX="458.0" layoutY="27.0" text="Инспектор ГАИ">
          <font>
             <Font name="Comic Sans MS" size="38.0" />
          </font>

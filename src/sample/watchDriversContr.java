@@ -35,7 +35,7 @@ public class watchDriversContr {
 
         btnSearchDrivers.setOnAction(Event ->{
             goBackBtn.getScene().getWindow().hide();
-            mainWindowContr.setScene("/sample/mainWindow.fxml");
+            mainWindowContr.setScene("/sample/searchDrivers.fxml");
         });
 
     }
@@ -62,6 +62,7 @@ public class watchDriversContr {
 
         return list;
     }
+
     private void GetDataDrivers() throws SQLException, ClassNotFoundException {
         TableColumn<Driver, String> name = new TableColumn<>("Имя");
         TableColumn<Driver, String> surname = new TableColumn<>("Фамилия");

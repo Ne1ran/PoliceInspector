@@ -34,7 +34,7 @@ public class watchTransportsContr {
 
         btnSearchTransport.setOnAction(Event ->{
             goBackBtn.getScene().getWindow().hide();
-            mainWindowContr.setScene("/sample/mainWindow.fxml");
+            mainWindowContr.setScene("/sample/searchTransport.fxml");
         });
 
     }

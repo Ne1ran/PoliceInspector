@@ -124,4 +124,28 @@ public class ConnHandler extends Config {
 
         return rset;
     }
+    public ResultSet searchDrivers(String query) throws SQLException, ClassNotFoundException {
+        ResultSet rset = null;
+        String search = "SELECT * FROM " + AllConstants.DriversConst.DRIVERSTABLE + " WHERE " + query;
+
+        PreparedStatement prst = getConnection().prepareStatement(search);
+        rset = prst.executeQuery();
+        return rset;
+    }
+    public ResultSet searchDTPs(String query) throws SQLException, ClassNotFoundException {
+        ResultSet rset = null;
+        String search = "SELECT * FROM " + AllConstants.DTPConst.DTPs_TABLE + " WHERE " + query;
+
+        PreparedStatement prst = getConnection().prepareStatement(search);
+        rset = prst.executeQuery();
+        return rset;
+    }
+    public ResultSet searchTransports(String query) throws SQLException, ClassNotFoundException {
+        ResultSet rset = null;
+        String search = "SELECT * FROM " + AllConstants.TransportConst.TRANSPORT_TABLE + " WHERE " + query;
+
+        PreparedStatement prst = getConnection().prepareStatement(search);
+        rset = prst.executeQuery();
+        return rset;
+    }
 }

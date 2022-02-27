@@ -2,6 +2,7 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import java.sql.ResultSet;
@@ -19,25 +20,28 @@ public class Controller {
     private PasswordField passwordField;
 
     @FXML
+    private Label wrongData;
+
+    @FXML
     void initialize() {
         authButton.setOnAction(Event -> {
             String login = loginField.getText().trim();
             String pass = passwordField.getText().trim();
 
-            if (!login.equals("") && !pass.equals("")){
+            if (!(login.equals("") && pass.equals(""))){
                 try {
                     CurrentlyLoggedUser userNow = new CurrentlyLoggedUser();
                     if (loginUser(login, pass, userNow)){
                         authButton.getScene().getWindow().hide();
                         mainWindowContr.setScene("/sample/mainWindow.fxml");
-                    } else System.out.println("Такого пользователя не существует");
+                    } else wrongData.setText("Введены неправильные данные.");
                 } catch (SQLException | ClassNotFoundException throwables) {
-                    throwables.printStackTrace();
+                    System.out.println("Ошибка авторизации");
                 }
 
 
             } else {
-                System.out.println("Логин или пароль пусты");
+                wrongData.setText("Ничего не введено.");
             }
         });
     }

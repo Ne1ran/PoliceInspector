@@ -1,6 +1,5 @@
 package sample;
 
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -35,7 +34,7 @@ public class watchDTPsContr {
 
         btnSearchDTPs.setOnAction(Event ->{
             goBackBtn.getScene().getWindow().hide();
-            mainWindowContr.setScene("/sample/mainWindow.fxml");
+            mainWindowContr.setScene("/sample/searchDTPs.fxml");
         });
 
     }
