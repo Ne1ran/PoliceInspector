@@ -20,7 +20,7 @@
                         <Font name="Comic Sans MS" size="38.0" />
                     </font>
                 </Label>
-                <Button fx:id="btnSearchDrivers" layoutX="490.0" layoutY="508.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="220.0" style="-fx-border-color: black;" text="Поиск" textAlignment="CENTER">
+                <Button fx:id="btnSearchDrivers" layoutX="495.0" layoutY="507.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="220.0" style="-fx-border-color: black;" text="Поиск" textAlignment="CENTER">
                     <font>
                         <Font name="Berlin Sans FB" size="24.0" />
                     </font>
