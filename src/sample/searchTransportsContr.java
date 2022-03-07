@@ -44,10 +44,9 @@ public class searchTransportsContr {
 
         searchBtn.setOnAction(Event -> {
             try {
-
                 searchTransports();
             } catch (SQLException | ClassNotFoundException throwables) {
-                System.out.println("Ошибка!!11!");
+                nothingFound.setText("Ошибка поиска");
             }
         });
     }

@@ -36,7 +36,7 @@ public class Controller {
                         mainWindowContr.setScene("/sample/mainWindow.fxml");
                     } else wrongData.setText("Введены неправильные данные.");
                 } catch (SQLException | ClassNotFoundException throwables) {
-                    System.out.println("Ошибка авторизации");
+                    wrongData.setText("Ошибка авторизации!");
                 }
 
 

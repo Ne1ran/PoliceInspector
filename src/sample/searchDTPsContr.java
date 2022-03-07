@@ -46,7 +46,7 @@ public class searchDTPsContr {
             try {
                 searchDTPs();
             } catch (SQLException | ClassNotFoundException throwables) {
-                System.out.println("Ошибка!!11!");
+                nothingFound.setText("Ошибка поиска");
             }
         });
     }

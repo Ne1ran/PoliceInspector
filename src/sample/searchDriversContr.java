@@ -49,7 +49,7 @@ public class searchDriversContr {
             try {
                 searchDrivers();
             } catch (SQLException | ClassNotFoundException throwables) {
-                System.out.println("Ошибка!!11!");
+                nothingFound.setText("Ошибка поиска");
             }
         });
     }
